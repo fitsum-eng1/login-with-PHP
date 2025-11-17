@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0066ff, #00ccff);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInPage 1s ease-in-out;
+}
+
+#loginsection {
+  background-color: #ffffff;
+  width: 380px;
+  max-width: 90%;
+  padding: 35px 25px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  animation: slideUp 1s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#loginsection:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+#loginsection h1 {
+  color: #0066ff;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+#loginsection hr {
+  border: none;
+  height: 2px;
+  background: #00ccff;
+  width: 60%;
+  margin: 10px auto 25px auto;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"] {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+input:focus {
+  border-color: #0066ff;
+  box-shadow: 0 0 6px rgba(0, 102, 255, 0.3);
+  outline: none;
+  transform: scale(1.02);
+}
+
+button {
+  width: 95%;
+  background: linear-gradient(to right, #0066ff, #00ccff);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  background: linear-gradient(to right, #004de6, #0099ff);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 102, 255, 0.3);
+}
+
+a {
+  color: #0066ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#loginsection p,
+#loginsection span {
+  color: #333;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  #loginsection {
+    width: 90%;
+    padding: 25px 20px;
+  }
+
+  input,
+  button {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
